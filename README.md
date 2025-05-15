@@ -12,7 +12,3 @@ An app to simplify the creation of admin API scripts and promote good secret sec
 Please find a User's Guide in the Wiki section of this project. 
 
 - [User's Guide](../../wiki)
-- [User's Guide](wiki)
-
-
-The https://github.com/Jamf-Concepts/apiutil/wiki
