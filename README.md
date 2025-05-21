@@ -5,7 +5,7 @@
  -->
 
 
-# Jamf API Helper
+# Jamf API Utility
 
 An app to simplify the creation of admin API scripts and promote good secret security. 
 
