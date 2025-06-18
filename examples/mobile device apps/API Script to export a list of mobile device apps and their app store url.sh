@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Requires setup of the Jamf API Utility https://concepts.jamf.com/#api-utility 
+# Export a list of mobile device apps and their app store URL. 
 
+# (!) Requires setup of the Jamf API Utility https://concepts.jamf.com/#api-utility 
+
+# The name of the Jamf Pro target you set up in the API Utility
 API_TARGET_NAME='pro'
 
 # Output file
@@ -30,3 +33,14 @@ for APP_ID in $APP_IDS; do
 done
 
 echo "Export complete. Results saved to $(pwd)/${OUTPUT_FILE}."
+
+# Copyright 2025 Jamf
+
+# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+# CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+# TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
