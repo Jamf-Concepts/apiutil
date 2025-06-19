@@ -23,7 +23,7 @@ DEPARTMENT='Managers'
 OUTPUT_FILE="List of computer smart groups that reference the ${DEPARTMENT} department.csv"
 
 echo "Getting a list of computer smart groups..."
-DATA=$(jamfapi --target "${API_TARGET_NAME}" --path "/JSSResource/computergroups")
+DATA=$(apiutil --target "${API_TARGET_NAME}" --path "/JSSResource/computergroups")
 
 echo "Extracting a list of smart group IDs..."
 ITEM_IDS=$(echo "${DATA}" | jq '.computer_groups[] | select(.is_smart == true) | .id')
@@ -36,7 +36,7 @@ echo "Reading information for each group id and exporting info on any that refer
 for ITEM_ID in $ITEM_IDS; do
   echo "Processing item ID $ITEM_ID..."
 
-  ITEM_JSON=$(jamfapi --target "${API_TARGET_NAME}" --path "/JSSResource/computergroups/id/$ITEM_ID")
+  ITEM_JSON=$(apiutil --target "${API_TARGET_NAME}" --path "/JSSResource/computergroups/id/$ITEM_ID")
 	GROUP_NAME=$(echo "$ITEM_JSON" | jq -r '.computer_group.name')
 
   MATCH=$(echo "$ITEM_JSON" | jq -r '.computer_group.criteria[]? | select(.name == "Department" and .value == "Managers")')

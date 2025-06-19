@@ -12,7 +12,7 @@ OUTPUT_FILE="jamf_mobile_apps.csv"
 
 
 echo "Getting a list of application IDs..."
-APP_DATA=$(jamfapi --target "${API_TARGET_NAME}" --path "/JSSResource/mobiledeviceapplications")
+APP_DATA=$(apiutil --target "${API_TARGET_NAME}" --path "/JSSResource/mobiledeviceapplications")
 
 echo "Extracting a list of app IDs..."
 APP_IDS=$(echo "${APP_DATA}" | jq '.mobile_device_applications[]?.id')
@@ -24,7 +24,7 @@ echo "Reading information for each app id and exporting data to output file"
 for APP_ID in $APP_IDS; do
   echo "Processing App ID $APP_ID..."
 
-  APP_JSON=$(jamfapi --target "${API_TARGET_NAME}" --path "/JSSResource/mobiledeviceapplications/id/$APP_ID")
+  APP_JSON=$(apiutil --target "${API_TARGET_NAME}" --path "/JSSResource/mobiledeviceapplications/id/$APP_ID")
 
   APP_NAME=$(echo "$APP_JSON" | jq -r '.mobile_device_application.general.name')
   APP_URL=$(echo "$APP_JSON" | jq -r '.mobile_device_application.general.itunes_store_url')

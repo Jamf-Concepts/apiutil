@@ -1,6 +1,6 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Jamf-Concepts/apiutil?display_name=tag) ![GitHub all releases](https://img.shields.io/github/downloads/Jamf-Concepts/apiutil/total)  ![GitHub latest release](https://img.shields.io/github/downloads/Jamf-Concepts/apiutil/latest/total)
 <!--
-![GitHub issues](https://img.shields.io/github/issues-raw/Concepts/apiutil) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Concepts/jamfapi)
+![GitHub issues](https://img.shields.io/github/issues-raw/Jamf-Concepts/apiutil) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Jamf-Concepts/jamfapi)
  -->
 
 
